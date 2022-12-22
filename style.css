@@ -62,9 +62,48 @@ select {
   }
 }
 
-
 @font-face {
     font-family: norse-bold;
     src: url('Norse-Bold.otf') format('opentype');
 }
 
+body {
+    background-color: black;
+    padding: 5vh 5vw;
+}   
+
+.page {
+    height: 90vh;
+    background-color: rgb(13, 13, 50);
+    border-radius: 5vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.banner {
+    height: 100%;
+    background-image:
+    linear-gradient(to left, rgba(13,13,50,.5), rgba(13,13,50,1)),
+    url('https://media.giphy.com/media/W5UoBN0YMdT1QP8Yfr/giphy.gif');
+    background-size: cover;
+}
+
+.odin-logo {    
+    height: 20%;
+    margin-top: 5vh;
+    background-color: rgba(13,13,50,0.5);
+    background-image: url(odin-lined.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 20%;
+}
+
+.odin-text {
+    font-family: norse-bold;
+    color: white;
+    font-size: 10vh;
+    position: relative;
+    top: 1vh;
+    left: 15vw;
+}
