@@ -90,20 +90,19 @@ body {
 }
 
 .odin-logo {    
-    height: 20%;
+    height: 10vw;
     margin-top: 5vh;
     background-color: rgba(13,13,50,0.5);
     background-image: url(odin-lined.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position-x: 20%;
+    background-position-x: 30%;
 }
 
 .odin-text {
     font-family: norse-bold;
     color: white;
-    font-size: 10vh;
+    font-size: 7vw;
     position: relative;
-    top: 1vh;
-    left: 15vw;
+    left: 50%;
 }
