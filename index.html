@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="passwordmatching.js" defer></script>
 </head>
 <body>
     <div class="page">
@@ -15,6 +16,38 @@
             </div>
         </div>
         <div class="content">
+            <div class="disclaimer">
+                <span>Use the form below to create an account. <br> <b>Hint</b>: this is not a real service.</span>
+            </div>
+            <form action="http://httpbin.org/post" method="post">
+                <div>
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" placeholder="John" required>
+                </div>
+                <div>
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" placeholder="Doe" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="jdoe@gmail.com" required>
+                </div>
+                <div>
+                    <label for="mobile_number">Mobile Number</label>
+                    <input type="tel" id="mobile_number" placeholder="9403181029" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" minlength="8" oninput="checkMatching()" required>
+                </div>
+                <div>
+                    <label for="password-confirm">Confirm Password</label>
+                    <input type="password" id="password-confirm" minlength="8" oninput="checkMatching()" required>
+                    <div class="warning"></div>
+                </div>
+                <button type="submit">Create Account</button>
+                <button type="button">Login</button>
+              </form>
         </div>
     </div>
 </body>

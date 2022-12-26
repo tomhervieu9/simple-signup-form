@@ -61,6 +61,12 @@ select {
     scroll-behavior: initial;
   }
 }
+/* Custom added initializations */
+input:focus {
+  outline: none;
+}
+
+
 
 @font-face {
     font-family: norse-bold;
@@ -91,7 +97,7 @@ body {
 
 .odin-logo {    
     height: 10vw;
-    margin-top: 5vh;
+    margin-top: 15vh;
     background-color: rgba(13,13,50,0.5);
     background-image: url(odin-lined.png);
     background-size: contain;
@@ -105,4 +111,72 @@ body {
     font-size: 7vw;
     position: relative;
     left: 50%;
+}
+
+.content {
+  max-height: 90vh;
+  padding: 5vh;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+.disclaimer {
+  color:white;
+  font-size: 4vh;
+  overflow: hidden;
+}
+
+form {
+  color: white;
+  font-size: 3vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+label {
+  display: block;
+}
+
+label::after {
+  font-size: 2vh;
+  content: ' (required)';
+}
+
+input {
+  height: 5vh;
+  width: 20vw;  
+  border: .5vh solid white;
+  border-radius: 1vh;
+}
+
+input:focus {
+  box-shadow: 0px 0px 5px #fff;   
+}
+
+input:valid {
+  border-color: rgb(0, 192, 115);
+}
+
+form button {
+  height: 8vh;
+  width: 20vw;
+  border: .5vh solid white;
+  border-radius: 1vh;
+  font-size: 4vh;
+  background-color: rgb(13, 13, 50);
+  color:white;
+}
+
+::placeholder {
+  color: rgb(13, 13, 50);
+  opacity: .35;
+}
+
+.warning {
+  color: red;
+}
+
+::selection {
+  background-color: rgb(0, 192, 115);
 }
